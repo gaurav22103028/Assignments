@@ -9,3 +9,4 @@ while i<10 :
         print("Right!")
     else :
         print("Wrong. The answer is ", a*b)
+    i=i+1    
