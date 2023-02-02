@@ -5,12 +5,14 @@ def factorial(a):
     for i in range(1,a+1):
         produc=produc*i
     return(produc)
-def nCr(n,r):
-    val=factorial(n)/(factorial(r)*factorial(n-r))
-    val=int(val)
-    return(val)
-n=int(input("Enter number of rows:"))
+
+# input for the number of rows
+n = int(input("Rows:"))
 for i in range(n):
-    for j in range(i+1):
-        print(nCr(i,j),end=" ")
-    print("")
+    for j in range(n - i + 1):
+        # for left spacing
+        print(end=" ")
+    for j in range(i + 1):
+        print(factorial(i) // (factorial(j) * factorial(i - j)), end=" ")
+    # for new line
+    print()
